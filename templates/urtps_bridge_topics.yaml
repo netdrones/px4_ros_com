@@ -2,14 +2,6 @@
 # Edit instead the same file under PX4-Autopilot/msg/tools and use the 
 # PX4-Autopilot/msg/tools/uorb_to_ros_urtps_topics.py to regenerate this file.
 rtps:
-  - msg: DebugArray
-    receive: true
-  - msg: DebugKeyValue
-    receive: true
-  - msg: DebugValue
-    receive: true
-  - msg: DebugVect
-    receive: true
   - msg: OffboardControlMode
     receive: true
   - msg: OpticalFlow
@@ -36,9 +28,6 @@ rtps:
   - msg: VehicleOdometry
     send: true
   - base: VehicleOdometry
-    msg: VehicleMocapOdometry
-    receive: true
-  - base: VehicleOdometry
     msg: VehicleVisualOdometry
     receive: true
   - msg: VehicleStatus
@@ -58,5 +47,7 @@ rtps:
     receive: true
   - msg: TimesyncStatus
     send: true
-  - msg: SensorCombined
+  - msg: VehicleImu
+    send: true
+  - msg: VehicleImuStatus
     send: true
